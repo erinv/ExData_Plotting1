@@ -42,7 +42,7 @@ legend(x="topright", c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty
 
 #Fourth plot:
 plot(subpower$unique, subpower$Global_reactive_power, type="l", 
-     xlab = "", ylab="Global_reactive_power (kilowatts)")
+     xlab = "", ylab="Global_reactive_power")
 
 
 dev.off()
