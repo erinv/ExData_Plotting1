@@ -19,7 +19,10 @@ subpower <- subset(powerdata, powerdata$Date=="2007-02-01" | powerdata$Date=="20
 #Convert "unique" variable to POSIXlt class
 subpower$unique <- strptime(subpower$unique, format = "%d/%m/%Y %H:%M:%S")
 
-#Open png driver, construct histogram, close driver/device to write file
-png(filename = "plot1.png", width=480, height=480)
-hist(subpower$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+#Open png driver, construct plot, close driver/device to write file
+png(filename = "plot2.png", width=480, height=480)
+
+plot(subpower$unique, subpower$Global_active_power, type="l", 
+     xlab = "", ylab="Global Active Power (kilowatts)") 
+    
 dev.off()
